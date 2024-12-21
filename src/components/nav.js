@@ -15,7 +15,7 @@ export default function Navbar() {
           </li>
         </SignedIn>
         <li>
-          <a href="/submission">Submission</a>
+          <a href="/allRoutes">Your Routes</a>
         </li>
         <li>
           <SignedOut>
