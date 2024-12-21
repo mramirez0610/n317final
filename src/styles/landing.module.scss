@@ -1,0 +1,56 @@
+.landing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  .heroImg {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+  }
+  .info {
+    width: 55%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    p {
+      margin-top: 2%;
+    }
+
+    ol {
+      margin-top: 2%;
+      padding-left: 1.5rem;
+      list-style-type: decimal;
+      li {
+        line-height: 1.5;
+      }
+    }
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+
+      button {
+        width: 100px;
+        height: 40px;
+        background-color: #f1f1f1;
+        transition: all 0.3s;
+        color: #333;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 10px;
+
+        &:hover {
+          background-color: #333;
+          color: #f1f1f1;
+        }
+      }
+    }
+  }
+}
