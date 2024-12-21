@@ -11,6 +11,7 @@ export default function RouteDetails() {
   const [route, setRoute] = useState(null);
 
   //this was very difficult to get working...
+  //slugs are annoying. i understood everything, up until this function below
   useEffect(() => {
     if (formData && slug) {
       const foundRoute = formData.find((route) => route.slug === slug);
