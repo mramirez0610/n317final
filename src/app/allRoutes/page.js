@@ -2,6 +2,8 @@
 import { useForm } from "@/context/FormContext";
 import styles from "@/styles/allRoutes.module.scss";
 import Link from "next/link";
+import Image from "next/image";
+import Hero from "@/components/hero";
 
 export default function AllRoutes() {
   const { formData } = useForm();
@@ -14,6 +16,7 @@ export default function AllRoutes() {
 
   return (
     <main className={styles.allRoutes}>
+      <Hero imageSrc="/img/img3.jpeg" />
       <h2>here's your routes!</h2>
       <div className={styles.routes}>
         {formData.map((route, index) => (

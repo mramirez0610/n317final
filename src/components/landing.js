@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Hero from "@/components/hero";
 import styles from "@/styles/landing.module.scss";
 
 export default function Landing() {
@@ -10,15 +10,7 @@ export default function Landing() {
 
   return (
     <main className={styles.landing}>
-      <div className={styles.heroImgContainer}>
-        <div className={styles.tint}></div> {/* Add this line for tint */}
-        <Image
-          src={"/img/img1.jpeg"}
-          width={2000}
-          height={2000}
-          className={styles.heroImg}
-        />
-      </div>
+      <Hero imageSrc="/img/img1.jpeg" />
       <div className={styles.info}>
         <h2>Welcome to RouteTracker!</h2>
         <p>
