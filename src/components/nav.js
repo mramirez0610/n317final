@@ -3,12 +3,13 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 export default function Navbar() {
   return (
-    <nav className={styles.navbar}>
+    <div className={styles.navbar}>
       <h3>RouteTracker</h3>
       <ul>
         <li>
           <a href="/">Home</a>
         </li>
+
         <SignedIn>
           <li>
             <a href="/newRoute">Log a Route</a>
@@ -26,6 +27,6 @@ export default function Navbar() {
           </SignedIn>
         </li>
       </ul>
-    </nav>
+    </div>
   );
 }

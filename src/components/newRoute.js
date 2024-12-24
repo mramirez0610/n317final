@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useForm } from "@/context/FormContext";
 import styles from "@/styles/form.module.scss";
+import Image from "next/image";
 
 export default function NewRoute() {
   const [newRoute, setNewRoute] = useState({
@@ -100,6 +101,15 @@ export default function NewRoute() {
 
   return (
     <div className={styles.formContainer}>
+      <div className={styles.heroImgContainer}>
+        <div className={styles.tint}></div>
+        <Image
+          src={"/img/img2.jpeg"}
+          width={2000}
+          height={2000}
+          className={styles.heroImg}
+        />
+      </div>
       <form className={styles.form} onSubmit={submit}>
         <label>
           Climb Name:
