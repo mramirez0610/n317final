@@ -103,52 +103,65 @@ export default function NewRoute() {
     <div className={styles.formContainer}>
       <Hero imageSrc="/img/img1.jpeg" />
       <form className={styles.form} onSubmit={submit}>
-        <label>
-          Climb Name:
-          <input
-            type="text"
-            name="climbName"
-            value={newRoute.climbName}
-            onChange={handleClimbNameChange}
-          />
+        <label htmlFor="climbName">Climb Name:</label>
+        <input
+          id="climbName"
+          className={styles.input}
+          type="text"
+          name="climbName"
+          value={newRoute.climbName}
+          onChange={handleClimbNameChange}
+        />
+        <div className={styles.inlineFields}>
+          <div className={styles.field}>
+            <label htmlFor="climbType">Climb Type:</label>
+            <select
+              id="climbType"
+              className={styles.select}
+              name="climbType"
+              value={newRoute.climbType}
+              onChange={handleClimbTypeChange}
+            >
+              <option value="Bouldering">Bouldering</option>
+              <option value="Top Rope">Top Rope</option>
+            </select>
+          </div>
+          <div className={styles.field}>
+            <label htmlFor="subType">Grade:</label>
+            <select
+              id="subType"
+              className={styles.select}
+              name="subType"
+              value={newRoute.subType}
+              onChange={handleSubTypeChange}
+            >
+              {subTypeOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+        <label htmlFor="notes">Notes:</label>
+        <br />
+        <label htmlFor="example" className={styles.example}>
+          (How did the climb feel? Was it reachy? Did you cruise it? How many
+          times did you fall? Take all these things into account when writing
+          your notes.)
         </label>
-        <label>
-          Climb Type:
-          <select
-            name="climbType"
-            value={newRoute.climbType}
-            onChange={handleClimbTypeChange}
-          >
-            <option value="Bouldering">Bouldering</option>
-            <option value="Top Rope">Top Rope</option>
-          </select>
-        </label>
-        <label>
-          Sub Type:
-          <select
-            name="subType"
-            value={newRoute.subType}
-            onChange={handleSubTypeChange}
-          >
-            {subTypeOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Notes:
-          <textarea
-            name="notes"
-            value={newRoute.notes}
-            onChange={(e) => {
-              setNewRoute({ ...newRoute, notes: e.target.value });
-            }}
-          />
-        </label>
-
-        <button type="submit">Submit</button>
+        <textarea
+          id="notes"
+          className={styles.textarea}
+          name="notes"
+          value={newRoute.notes}
+          onChange={(e) => {
+            setNewRoute({ ...newRoute, notes: e.target.value });
+          }}
+        />
+        <button className={styles.button} type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );
