@@ -101,7 +101,7 @@ export default function NewRoute() {
 
   return (
     <div className={styles.formContainer}>
-      <Hero imageSrc="/img/img1.jpeg" />
+      <Hero imageSrc="/img/img1.jpeg" alt="New route hero image" />
       <form className={styles.form} onSubmit={submit}>
         <label htmlFor="climbName">Climb Name:</label>
         <input
